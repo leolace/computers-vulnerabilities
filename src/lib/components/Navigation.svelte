@@ -37,7 +37,7 @@
 	$scrollX += 1;
 	return;
       }
-      console.log("SCROLLX: ", $scrollX)
+
       window.scrollTo({ left: $scrollX - window.innerWidth / 3, top: 0, behavior: 'instant' });
       $scrollX += 1;
     }, 1);
@@ -52,13 +52,11 @@
       start = start / speedup;
     }
 
-    btn.onmousedown = () => {
-      repeat();
-    }
+    btn.onmousedown = () => repeat();
+    btn.onmouseup = () => clearTimeout(id);
 
-    btn.onmouseup = () => {
-      clearTimeout(id)
-    }
+    btn.ontouchstart = () => repeat();
+    btn.ontouchend = () => clearTimeout(id);
   }
 
 
