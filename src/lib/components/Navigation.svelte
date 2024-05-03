@@ -31,7 +31,7 @@
       scrolling_right = true;
 
       if (scrollX < window.innerWidth / 3) {
-	scrollX += 1;
+	$scrollX += 1;
 	return;
       }
       console.log("SCROLLX: ", $scrollX)
