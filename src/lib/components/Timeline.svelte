@@ -27,7 +27,7 @@
     </div>
   </div>
   <div class="reset" style={`left: ${$scrollX}px`}>
-    <button on:click={resetTimeline}>voltar</button>
+    <!-- <button on:click={resetTimeline}>voltar</button> -->
   </div>
 </div>
 

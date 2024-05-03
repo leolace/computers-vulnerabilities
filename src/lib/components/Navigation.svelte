@@ -8,6 +8,9 @@
   let scrolling_right = false;
   let scrolling_left = false;
 
+  let leftButton: HTMLButtonElement;
+  let rightButton: HTMLButtonElement;
+
   const goLeft = () => {
     scrolling_right = false;
     const beforeScrollX = $scrollX - SCROLL_AMOUNT;
@@ -40,17 +43,39 @@
     }, 1);
   };
 
+  const holdit = (btn, action, start, speedup) => {
+    let id;
+
+    const repeat = () => {
+      action();
+      id = setTimeout(repeat, start);
+      start = start / speedup;
+    }
+
+    btn.onmousedown = () => {
+      repeat();
+    }
+
+    btn.onmouseup = () => {
+      clearTimeout(id)
+    }
+  }
+
+
   onMount(() => {
     window.scrollTo(0, 0);
 
     const scroll = (e: WheelEvent) => {
-      console.log(scrollX);
       if (e.deltaY < 0) {
 	goLeft();
       } else {
 	goRight();
       }
     };
+
+    holdit(leftButton, goLeft, 100, 1);
+    holdit(rightButton, goRight, 100, 1);
+    
     document.body.addEventListener('wheel', scroll);
 
     document.body.addEventListener('touchstart', () => {
@@ -73,8 +98,8 @@
 </script>
 
 <div class="navigation">
-  <button class="left-btn" on:click={goLeft}>left</button>
-  <button class="right-btn" on:click={goRight}>right</button>
+  <button class="left-btn" bind:this={leftButton}>left</button>
+  <button class="right-btn" bind:this={rightButton}>right</button>
 </div>
 
 
