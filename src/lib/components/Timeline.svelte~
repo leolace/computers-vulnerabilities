@@ -1,0 +1,32 @@
+<script lang="ts">
+  import const MARGIN_LEFT: number;
+  import let scrollX: number;
+
+  const START_YEAR = 1917;
+
+  const resetTimeline = () => {
+    const DECREMENT_RATE = 50;
+
+    let id = setInterval(() => {
+      if (scrollX <= 0) {
+	scrollX = 0;
+	return clearInterval(id);
+      }
+      scrollX -= DECREMENT_RATE;
+    }, 1);
+    window.scrollTo({ left: 0, top: 0, behavior: 'instant' });
+  };
+</script>
+
+<div class="timeline-container" style={`left: ${MARGIN_LEFT}px`}>
+  <div class="timeline">
+    <div class="marker-container" style={`left: ${scrollX}px`}>
+      <span class="marker"></span>
+      <span class="text">{Math.trunc(START_YEAR + scrollX / slotSize)}</span>
+    </div>
+  </div>
+  <div class="reset" style={`left: ${scrollX}px`}>
+    <button on:click={resetTimeline}>voltar</button>
+  </div>
+</div>
+

@@ -1,38 +1,15 @@
-# create-svelte
+# TODO
 
-Everything you need to build a Svelte project, powered by [`create-svelte`](https://github.com/sveltejs/kit/tree/main/packages/create-svelte).
+## correções/melhorias
+- [ ] melhorar usabilidade no celular 
+- [x] dividir em componentes
+- [ ] melhorar estilização
+- [ ] melhorar fim da linha do tempo (definir limite)
+- [ ] deixar botões invisiveis no celular (no pc com estilização diferente mas não invisivel)
 
-## Creating a project
-
-If you're seeing this, you've probably already done this step. Congrats!
-
-```bash
-# create a new project in the current directory
-npm create svelte@latest
-
-# create a new project in my-app
-npm create svelte@latest my-app
-```
-
-## Developing
-
-Once you've created a project and installed dependencies with `npm install` (or `pnpm install` or `yarn`), start a development server:
-
-```bash
-npm run dev
-
-# or start the server and open the app in a new browser tab
-npm run dev -- --open
-```
-
-## Building
-
-To create a production version of your app:
-
-```bash
-npm run build
-```
-
-You can preview the production build with `npm run preview`.
-
-> To deploy your app, you may need to install an [adapter](https://kit.svelte.dev/docs/adapters) for your target environment.
+## features
+- [ ] definir tamanho dinamico para o container global
+- [x] dividir anos em containers
+- [ ] definir template para a disposição das informações em cada ano
+- [ ] remover tamanho do container quando um ano não possui informações
+- [ ] adicionar o ano correspondente fixo em cada container
