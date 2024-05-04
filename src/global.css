@@ -11,5 +11,10 @@
 }
 
 body {
-  background-color: #191919
+  background: rgb(21,21,64,1);
+}
+
+.scroll-container{
+  background: rgb(21,21,21);
+  background: linear-gradient(115deg, rgba(21,21,21,1) 10%, rgba(21,21,64,1) 100%);
 }
