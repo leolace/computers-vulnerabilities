@@ -19,7 +19,6 @@
 <main bind:this={$scrollContainer}>
   <Navigation SCROLL_AMOUNT={SCROLL_AMOUNT}/>
 
-
   <div class="wrapper-container">
     <section  class="scroll-container">
       <div class="home">
@@ -55,25 +54,18 @@
     overflow-x: auto;
   }
 
-  .wrapper-container {
-    display: grid;
-    grid-template-columns: 1fr auto;
-    gap: 0rem;
-    height: 100dvh;
-  }
-
   .end {
-    width: 500px;
     margin-left: 10rem;
   }
   
   .scroll-container {
-    background: linear-gradient(115deg, #111 20%, rgba(21,21,64,1) 100%);
+    background: linear-gradient(90deg, #111 20%, #0f0f33 100%);
     padding: 1rem 2rem;
     position: relative;
+    height: 100dvh;
     display: flex;
     width: max-content;
-    gap: 2rem;
+    padding-top: 4rem;
   }
 
   .home {
@@ -81,7 +73,7 @@
     display: grid;
     align-content: space-between;
     gap: 1rem;
-    margin-right: 20rem;
+    margin-right: 15rem;
 
     div {
       display: grid;

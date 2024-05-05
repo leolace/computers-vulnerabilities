@@ -1,7 +1,7 @@
 <script lang="ts">
   import { scrollTo, scrollX, scrollContainer } from "$lib/stores/store"
-  import {CONTAINER_SIZE, SCROLL_OFFSET, SLOT_SIZE} from "$lib/data/constants"
-  import {contents} from "$lib/data/data"
+  import { CONTAINER_SIZE, SCROLL_OFFSET, SLOT_SIZE } from "$lib/data/constants"
+  import { contents } from "$lib/data/data"
 
   const resetTimeline = () => {
     const DECREMENT_RATE = 50;
@@ -26,7 +26,7 @@
 <div class="timeline-container" style={``}>
   <div class="timeline">
     <div class="marker-container">
-      <span class="marker" style={`left: ${$scrollX}px;`}>
+      <span class="marker" style={`left: ${$scrollX < 0 ? 0 : $scrollX}px;`}>
 	<span class="text">{contents[slotIndex].year}</span>
       </span>
       <span class="progress-bar" style={`width: ${$scrollX}px`}></span>
@@ -41,9 +41,9 @@
       {/each}
     </div>
   </div>
-  <div class="reset" style={`left: ${$scrollX}px`}>
+  <!-- <div class="reset" style={`left: ${$scrollX}px`}> -->
     <!-- <button on:click={resetTimeline}>voltar</button> -->
-  </div>
+  <!-- </div> -->
 </div>
 
 <style lang="scss">

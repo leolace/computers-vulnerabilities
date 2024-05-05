@@ -1,7 +1,8 @@
 # TODO
 
 ## correções/melhorias
-- [ ] melhorar usabilidade no celular 
+- [ ] CORRIGIR usabilidade no celular 
+
 - [x] dividir em componentes
 - [x] melhorar estilização
 - [x] melhorar fim da linha do tempo (definir limite)
