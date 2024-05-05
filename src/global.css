@@ -21,3 +21,31 @@ body {
 .scroll-container{
 
 }
+
+img {
+  max-width: 100%;
+  display: block;
+}
+
+a {
+  text-decoration: underline;
+  color: inherit;
+  font-weight: 600;
+}
+
+p {
+  color: #ddd;
+  font-size: 1.25rem;
+  line-height: 1.5;
+  height: min-content;
+
+  @media (max-width: 800px) {
+    font-size: 1rem;
+  }
+}
+
+li, ul, ol {
+  text-decoration: none;
+  list-style: none;
+}
+

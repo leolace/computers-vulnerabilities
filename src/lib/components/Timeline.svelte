@@ -16,9 +16,9 @@
     window.scrollTo({ left: 0, top: 0, behavior: 'instant' });
   };
 
-  const moveTo = (i) => { $scrollContainer.scrollTo({left: (i * SLOT_SIZE) + (SLOT_SIZE / 3), behavior: "smooth"}) };
+  const moveTo = (i: number) => { $scrollContainer.scrollTo({left: (i * SLOT_SIZE) + (SLOT_SIZE / 3), behavior: "smooth"}) };
 
-  $: isActive = (i) => i * SLOT_SIZE <= $scrollX - ((SLOT_SIZE - 100) / 2);
+  $: isActive = (i: number) => i * SLOT_SIZE <= $scrollX - ((SLOT_SIZE - 100) / 2);
   $: slotIndex = Math.trunc($scrollX / SLOT_SIZE)
 
 </script>
@@ -28,7 +28,7 @@
     <div class="marker-container">
       <span class="marker" style={`left: ${$scrollX < 0 ? 0 : $scrollX}px;`}>
 	    <span class="text">
-	      :\ {contents[slotIndex].year}
+	      C:\{contents[slotIndex].year}
 	    </span>
 </span>
       <span class="progress-bar" style={`width: ${$scrollX}px`}></span>
@@ -49,9 +49,6 @@
 </div>
 
 <style lang="scss">
-  h1 {
-    color: #f00;
-  }
   .timeline-container {
     position: absolute;
     bottom: 10%;
@@ -91,7 +88,7 @@
     left: 50%;
     color: #00ff10;
     transform: translateX(-50%);
-    background-color: #111;
+    background-color: #000;
     display: flex;
     text-wrap: nowrap;
     text-shadow: 0 0 3px #00ff10, 0 0 6px #00ff10;

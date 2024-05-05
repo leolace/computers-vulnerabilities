@@ -8,8 +8,18 @@
   import Navigation from "$lib/components/Navigation.svelte";
   import Slots from "$lib/components/Slots.svelte"
   
-  const SCROLL_AMOUNT = 100;
+  const SCROLL_AMOUNT: number = 100;
   $: MARGIN_LEFT = $innerWidth / 3;
+
+  const moveTo = (i: number) => {
+    $scrollContainer.scrollTo({left: (i * SLOT_SIZE) + (SLOT_SIZE / 3), behavior: "smooth"})
+  };
+
+  let navBarRef: HTMLElement;
+
+  $: isActive = (i: number) => {
+    return $scrollX <= SLOT_SIZE * (i + 1) && $scrollX >= SLOT_SIZE * i 
+  }
 
 </script>
 
@@ -19,12 +29,22 @@
 <main bind:this={$scrollContainer}>
   <Navigation SCROLL_AMOUNT={SCROLL_AMOUNT}/>
 
+  <nav bind:this={navBarRef} class="header-navigation">
+    <ol>
+      {#each contents as {year}, i}
+	<li class={`${isActive(i) ? "active" : ""}`}>
+	  <button on:click={() => moveTo(i)}>{year}</button>
+	</li>
+      {/each}
+    </ol>
+  </nav>
+
   <div class="wrapper-container">
     <section  class="scroll-container">
       <section class="home">
 	<div class="home-content">
 	  <div>
-	    <h1>Seja bem-vindo.</h1>
+	    <h1># Seja bem-vindo.</h1>
 	    <p>Explore a história das vulnerabilidades da computação utilizando a linha do tempo à direita.</p>
 	    {#if $innerWidth >= 1000}
 	      <p>Para começar, segure [SHIFT] e efetue a rolagem da página com o [SCROLL] do mouse.</p>
@@ -32,6 +52,10 @@
 	      <p>Para começar, avance para a direita deslizando a tela.</p>
 	    {/if}
 	  </div>
+	  <nav class="links">
+	    <a href="./">## Introdução</a>
+	    <a href="./">## Fontes e créditos</a>
+	  </nav>
 	  <p>[Desenvolvido por Timehack | USP-ICMC]</p>
 	</div>
       </section>
@@ -51,6 +75,7 @@
     color: #00ff10;
     font-weight: 500;
     text-shadow: 0 0 3px #00ff10, 0 0 6px #00ff10;
+    font-size: 1.75rem;
   }
 
   main {
@@ -59,6 +84,71 @@
     height: 100dvh;
     max-width: 100vw;
     overflow-x: auto;
+  }
+
+  .header-navigation {
+    position: fixed;
+    top: 1rem;
+    left: 50%;
+    transform: translateX(-50%);
+    max-width: 20rem;
+    overflow-x: auto;
+    height: 2.5rem;
+    background-color: #000;
+    border: 3px solid #00ff10;
+    z-index: 100;
+    box-shadow: 0 0 2px #00ff10, 0 0 4px #00ff10;
+
+    @media (max-width: 800px) {
+      height: 2rem;
+      top: 0.5rem;
+    }
+
+    ol {
+      display: flex;
+      align-items: center;
+      height: 100%;
+    }
+
+    li {
+      flex: 1;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: #00ff10;
+      min-width: 5rem;
+      font-size: 1.25rem;
+      font-weight: 500;
+      cursor: pointer;
+      height: 100%;
+      transition: 0.3s linear background;
+
+      &:hover, &.active {
+	background-color: #00ff10;
+	color: #000;
+      }
+
+      @media (max-width: 800px) {
+	font-size: 1rem;
+	min-width: 4rem;
+      }
+    }
+
+    button {
+      all: unset;
+    }
+  }
+
+  .links {
+    display: grid;
+    gap: 1rem;
+    color: #00ff10;
+    font-size: 1.25rem;
+    align-self: start;
+
+    @media (max-width: 800px) {
+      font-size: 1rem;
+    }
   }
 
   .end {
@@ -104,10 +194,6 @@
       gap: 1rem;
     }
 
-    p {
-      color: #ddd;
-      font-size: 1rem;
-    }
   }
 
 

@@ -1,7 +1,8 @@
-import { contents } from "./data.ts"
+import { innerWidth } from "$lib/stores/store";
+import { contents } from "./data"
 
 const getSlotSize = () => {
-  return contents.length * 2000;
+  return contents.length * 3000;
 };
 
 // values in pixeis
