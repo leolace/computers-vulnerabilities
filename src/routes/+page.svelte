@@ -19,21 +19,32 @@
 <main bind:this={$scrollContainer}>
   <Navigation SCROLL_AMOUNT={SCROLL_AMOUNT}/>
 
-  <div class="wrapper-container">
-    <section  class="scroll-container" style={`width: ${CONTAINER_SIZE}px;`}>
-      <Slots MARGIN_LEFT={MARGIN_LEFT} />
 
-      <Timeline MARGIN_LEFT={MARGIN_LEFT} slotSize={SLOT_SIZE}/>
-    </section>
-    <div class="end" style={`transform: translateX(${MARGIN_LEFT}px)`}>
-      <h1>fim da linha do tempo</h1>
+  <div class="wrapper-container">
+    <section  class="scroll-container">
+      <div class="home">
+	<div>
+	  <h1>Seja bem-vindo.</h1>
+	  <p>Explore a história das vulnerabilidades da computação utilizando a linha do tempo à direita.</p>
+	</div>
+	<p>[Desenvolvido por Timehack | USP-ICMC]</p>
       </div>
+      <div style={`flex: 1; position: relative; width: ${CONTAINER_SIZE}px;`}>
+	<Slots />
+	<Timeline />
+      </div>
+      <div class="end" style={`width: ${SLOT_SIZE - (SLOT_SIZE / 6)}px`}>
+	<h1>fim da linha do tempo</h1>
+      </div>
+    </section>
   </div>
 </main>
 
 <style lang="scss">
   h1 {
-    color: #fff;
+    color: #00ff10;
+    font-weight: 500;
+    text-shadow: 0 0 3px #00ff10, 0 0 6px #00ff10;
   }
 
   main {
@@ -48,15 +59,37 @@
     display: grid;
     grid-template-columns: 1fr auto;
     gap: 0rem;
+    height: 100dvh;
   }
 
   .end {
-    width: 1700px;
+    width: 2000px;
   }
   
   .scroll-container {
-    height: 100dvh;
+    background: linear-gradient(115deg, #111 20%, rgba(21,21,64,1) 100%);
+    padding: 1rem 2rem;
     position: relative;
+    display: flex;
+    width: max-content;
+    gap: 20rem;
+  }
+
+  .home {
+    width: 30rem;
+    display: grid;
+    align-content: space-between;
+    gap: 1rem;
+
+    div {
+      display: grid;
+      gap: 1rem;
+    }
+
+    p {
+      color: #ddd;
+      font-size: 1rem;
+    }
   }
 
 

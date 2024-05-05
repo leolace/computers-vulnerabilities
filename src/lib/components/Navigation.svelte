@@ -1,7 +1,7 @@
 <script lang="ts">
   import { onMount } from "svelte"
   import { scrollTo, scrollX, scrollContainer } from "$lib/stores/store.ts"
-  import {CONTAINER_SIZE, SCROLL_OFFSET} from "$lib/data/constants.ts"
+  import { CONTAINER_SIZE, SCROLL_OFFSET } from "$lib/data/constants.ts"
 
   export let SCROLL_AMOUNT: number;
 

@@ -3,13 +3,13 @@
 ## correções/melhorias
 - [ ] melhorar usabilidade no celular 
 - [x] dividir em componentes
-- [ ] melhorar estilização
-- [ ] melhorar fim da linha do tempo (definir limite)
-- [ ] deixar botões invisiveis no celular (no pc com estilização diferente mas não invisivel)
+- [x] melhorar estilização
+- [x] melhorar fim da linha do tempo (definir limite)
 
 ## features
-- [ ] definir tamanho dinamico para o container global
+- [x] definir tamanho dinamico para o container global
 - [x] dividir anos em containers
 - [ ] definir template para a disposição das informações em cada ano
-- [ ] remover tamanho do container quando um ano não possui informações
-- [ ] adicionar o ano correspondente fixo em cada container
+- [x] adicionar o ano correspondente fixo em cada container
+- [ ] estilizar container que mostra cada ano (fazer em forma de terminal)
+- [ ] quando o scroll tiver parado por mais de 3 segundos: exibir uma indicação no lugar que mostrar o ano para "segurar o shift"

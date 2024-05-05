@@ -1,7 +1,5 @@
 <script lang="ts">
-  export let MARGIN_LEFT: number;
-  export let slotSize: number;
-  import { scrollTo, scrollX } from "$lib/stores/store"
+  import { scrollTo, scrollX, scrollContainer } from "$lib/stores/store"
   import {CONTAINER_SIZE, SCROLL_OFFSET, SLOT_SIZE} from "$lib/data/constants"
   import {contents} from "$lib/data/data"
 
@@ -17,17 +15,30 @@
     }, 1);
     window.scrollTo({ left: 0, top: 0, behavior: 'instant' });
   };
+
+  const moveTo = (i) => { $scrollContainer.scrollTo({left: (i * SLOT_SIZE) + (SLOT_SIZE / 3), behavior: "smooth"}) };
+
+  $: isActive = (i) => i * SLOT_SIZE <= $scrollX - ((SLOT_SIZE - 100) / 2);
+  $: slotIndex = Math.trunc($scrollX / SLOT_SIZE)
+
 </script>
 
-<div class="timeline-container" style={`left: ${MARGIN_LEFT}px;`}>
-  <div>
-  </div>
+<div class="timeline-container" style={``}>
   <div class="timeline">
     <div class="marker-container">
       <span class="marker" style={`left: ${$scrollX}px;`}>
-	<span class="text">{contents[Math.trunc($scrollX / SLOT_SIZE)].year}</span>
+	<span class="text">{contents[slotIndex].year}</span>
       </span>
-      <span class="progress-bar" style={`width: ${$scrollX + 8}px`}></span>
+      <span class="progress-bar" style={`width: ${$scrollX}px`}></span>
+    </div>
+    <div class="middle-point-container">
+      {#each Array(contents.length) as _, i}
+	<div class="middle-point" style={`left: ${(i * SLOT_SIZE) + SLOT_SIZE / 2}px`}>
+	  <span class={`${isActive(i) ? "active" : ""}`}>
+	    <p>{contents[slotIndex].year}</p>
+	  </span>
+	</div>
+      {/each}
     </div>
   </div>
   <div class="reset" style={`left: ${$scrollX}px`}>
@@ -40,7 +51,7 @@
     position: absolute;
     bottom: 10%;
     width: 100%;
-    z-index: 200;
+    z-index: 1;
   }
 
   .reset {
@@ -62,8 +73,7 @@
     top: 50%;
     // width: 100%;
     transform: translateY(-50%);
-    z-index: 101;
-    padding-left: 0.5rem;
+    z-index: 2;
   }
 
   .text {
@@ -84,7 +94,7 @@
     display: block;
     width: 100%;
     height: 5px;
-    background-color: rgb(21,200,64,1);
+    background-color: #00ff10;
     position: relative;
 
     &::before {
@@ -97,8 +107,6 @@
       left: 0;
       top: 50%;
       transform: translateY(-50%);
-
-      
     }
   }
 
@@ -106,11 +114,56 @@
     display: block;
     width: 100%;
     height: 5px;
-    background-color: rgb(21,200,64,1);
+    background-color: #00ff10;
     position: relative;
     position: absolute;
     left: 0;
     top: 50%;
     transform: translateY(-50%);
+  }
+
+  .middle-point-container {
+    width: 100%;
+
+
+  }
+
+  .middle-point {
+    position: absolute;
+    transform: translate(-50%, -50%);
+    z-index: 100;
+    
+    span {
+      width: 2rem;
+      height: 2rem;
+      display: block;
+      background-color: #fff;
+      left: 50%;
+      transition: 0.3s ease all;
+      cursor: pointer;
+      border: 5px solid #fff;
+
+      display: flex;
+      align-items: center;
+      justify-content: center;
+
+      p {
+	color: #00ff10;
+	font-size: 0rem;
+	font-weight: 600;
+      }
+
+      &.active, &:hover {
+	background-color: #000;
+	border-color: #00ff10;
+	height: 5rem;
+	width: 5rem;
+
+	p {
+	  font-size: 1.25rem;
+	}
+      }
+      
+    }
   }
 </style>
