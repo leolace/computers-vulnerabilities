@@ -33,7 +33,7 @@
 	<Slots />
 	<Timeline />
       </div>
-      <div class="end" style={`width: ${SLOT_SIZE - (SLOT_SIZE / 6)}px`}>
+      <div class="end" style={`width: ${SLOT_SIZE - (SLOT_SIZE / 4)}px`}>
 	<h1>fim da linha do tempo</h1>
       </div>
     </section>
@@ -63,7 +63,8 @@
   }
 
   .end {
-    width: 2000px;
+    width: 500px;
+    margin-left: 10rem;
   }
   
   .scroll-container {
@@ -72,7 +73,7 @@
     position: relative;
     display: flex;
     width: max-content;
-    gap: 20rem;
+    gap: 2rem;
   }
 
   .home {
@@ -80,6 +81,7 @@
     display: grid;
     align-content: space-between;
     gap: 1rem;
+    margin-right: 20rem;
 
     div {
       display: grid;
