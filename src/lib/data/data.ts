@@ -18,7 +18,7 @@ Ao infectar um computador, o Creeper exibia a mensagem: 'Eu sou o Creeper, pegue
 ausar danos, o Creeper demonstrava a viabilidade de programas autopropagáveis e a necessidade de medidas de segurança em redes de computadores.`
 		],
 		imageUrl: "https://beaver.my/wp-content/uploads/2023/04/Creeper-Virus-Catch-Me-If-You-Can-min-1024x536.png",
-	  videoYoutubeCode: ["Ml4bgx8ZN9Q", "Rj_ClmRtVB0"]
+	  videoYoutubeCode: ["Ml4bgx8ZN9Q", "q6t9aNRQBG0"]
 	},
 	{ year: 1976, title: 'Creeper', text: ["", "", ""], imageUrl: "", videoYoutubeCode: ["", ""] },
 	{ year: 1980, title: 'Creeper', text: ["", "", ""], imageUrl: "", videoYoutubeCode: ["", ""] },
