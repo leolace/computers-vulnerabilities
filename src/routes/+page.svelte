@@ -26,6 +26,11 @@
 	  <div>
 	    <h1>Seja bem-vindo.</h1>
 	    <p>Explore a história das vulnerabilidades da computação utilizando a linha do tempo à direita.</p>
+	    {#if $innerWidth >= 1000}
+	      <p>Para começar, segure [SHIFT] e efetue a rolagem da página com o [SCROLL] do mouse.</p>
+	    {:else}
+	      <p>Para começar, avance para a direita deslizando a tela.</p>
+	    {/if}
 	  </div>
 	  <p>[Desenvolvido por Timehack | USP-ICMC]</p>
 	</div>
