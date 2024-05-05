@@ -16,3 +16,4 @@
 - [ ] quando o scroll tiver parado por mais de 3 segundos: exibir uma indicação no lugar que mostrar o ano para "segurar o shift"
 - [ ] adicionar seção de introdução e de fontes/creditos (em forma de terminal)
 - [ ] fazer tela final
+- [ ] o video abre em tela cheia quando o usuario clica (separar iframe em um componente)
