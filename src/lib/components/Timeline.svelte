@@ -85,8 +85,9 @@
     left: 50%;
     transform: translateX(-50%);
 
-    @media (max-width: 600px) {
-      font-size: 1.5rem;
+    @media (max-width: 1000px) {
+      font-size: 1.25rem;
+      bottom: -3rem;
     }
   }
 

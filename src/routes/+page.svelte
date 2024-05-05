@@ -21,13 +21,15 @@
 
   <div class="wrapper-container">
     <section  class="scroll-container">
-      <div class="home">
-	<div>
-	  <h1>Seja bem-vindo.</h1>
-	  <p>Explore a história das vulnerabilidades da computação utilizando a linha do tempo à direita.</p>
+      <section class="home">
+	<div class="home-content">
+	  <div>
+	    <h1>Seja bem-vindo.</h1>
+	    <p>Explore a história das vulnerabilidades da computação utilizando a linha do tempo à direita.</p>
+	  </div>
+	  <p>[Desenvolvido por Timehack | USP-ICMC]</p>
 	</div>
-	<p>[Desenvolvido por Timehack | USP-ICMC]</p>
-      </div>
+      </section>
       <div style={`flex: 1; position: relative; width: ${CONTAINER_SIZE}px;`}>
 	<Slots />
 	<Timeline />
@@ -65,15 +67,32 @@
     height: 100dvh;
     display: flex;
     width: max-content;
-    padding-top: 4rem;
+    padding-top: 3rem;
+
+    @media (max-width: 800px) {
+      padding: 1rem;
+      padding-top: 2rem;
+    }
   }
 
   .home {
     width: 30rem;
-    display: grid;
-    align-content: space-between;
-    gap: 1rem;
     margin-right: 15rem;
+
+    .home-content {
+      gap: 1rem;
+      display: grid;
+      align-content: space-between;
+      height: 100%;
+    }
+
+    @media (max-width: 800px) {
+      /* margin-right: 10rem; */
+      .home-content {
+	max-width: calc(100vw - 2rem);
+      }
+
+    }
 
     div {
       display: grid;
