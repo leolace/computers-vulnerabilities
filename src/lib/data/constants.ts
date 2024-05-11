@@ -2,7 +2,7 @@ import { innerWidth } from "$lib/stores/store";
 import { contents } from "./data"
 
 const getSlotSize = () => {
-  return contents.length * 3000;
+  return contents.length * 2500;
 };
 
 // values in pixeis

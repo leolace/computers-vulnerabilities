@@ -41,13 +41,19 @@
     <div bind:this={navBarRef} class="navigation">
       <ol>
       {#each contents as {year}, i}
-	<li class={`${isActive(i) ? "active" : ""}`}>
-	  <button on:click={() => moveTo(i)}>{year}</button>
+	<li>
+	  <button class={`${isActive(i) ? "active" : ""}`} on:click={() => moveTo(i)}>{year}</button>
 	</li>
       {/each}
     </ol>
     </div>
-    <span class="title">{contents[$activeIndex].title}</span>
+    <span class="title">
+      {#if $scrollX > 0}
+	{contents[$activeIndex].title}
+      {:else}
+	[Vulcomp]
+      {/if}
+      </span>
   </nav>
 
   <div class="wrapper-container">
@@ -136,28 +142,35 @@
     }
 
     li {
-      flex: 1;
-      display: flex;
       align-items: center;
       justify-content: center;
+      transition: 0.3s linear background;
+      display: flex;
+
+    }
+
+    button {
       color: #00ff10;
-      min-width: 5rem;
       font-size: 1.25rem;
       font-weight: 500;
       cursor: pointer;
+      flex: 1;
+      min-width: 5rem;
       height: 100%;
-      transition: 0.3s linear background;
+      display: block;
+      background: transparent;
+      border: none;
+      border-radius: 0;
+
+      &:focus {
+	outline: none;
+      }
 
       &:hover, &.active {
 	background-color: #00ff10;
 	color: #000;
       }
 
-
-    }
-
-    button {
-      all: unset;
     }
   }
 
@@ -206,7 +219,7 @@
 
     @media (max-width: 800px) {
       margin-right: 20rem;
-      width: 20rem;
+      width: 25rem;
       
       .home-content {
 	max-width: calc(100vw - 2rem);
