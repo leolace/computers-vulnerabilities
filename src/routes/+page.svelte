@@ -1,8 +1,9 @@
+
 <script lang="ts">
   import '../global.css';
   import { CONTAINER_SIZE, SLOT_SIZE} from "$lib/data/constants"
   import { contents } from "$lib/data/data"
-  import { scrollX, scrollContainer, innerWidth } from "$lib/stores/store"
+  import { scrollX, scrollContainer, innerWidth, activeIndex } from "$lib/stores/store"
   
   import Timeline from "$lib/components/Timeline.svelte";
   import Navigation from "$lib/components/Navigation.svelte";
@@ -21,6 +22,12 @@
     return $scrollX <= SLOT_SIZE * (i + 1) && $scrollX >= SLOT_SIZE * i 
   }
 
+  $: {
+    if (navBarRef) {
+      navBarRef.scrollTo({left: $activeIndex * 80, behavior: "smooth"})
+    }
+  }
+
 </script>
 
 <svelte:window bind:innerWidth={$innerWidth}/>
@@ -29,14 +36,18 @@
 <main bind:this={$scrollContainer}>
   <Navigation SCROLL_AMOUNT={SCROLL_AMOUNT}/>
 
-  <nav bind:this={navBarRef} class="header-navigation">
-    <ol>
+  <!-- falta estilizar titulo -->
+  <nav class="header">
+    <div bind:this={navBarRef} class="navigation">
+      <ol>
       {#each contents as {year}, i}
 	<li class={`${isActive(i) ? "active" : ""}`}>
 	  <button on:click={() => moveTo(i)}>{year}</button>
 	</li>
       {/each}
     </ol>
+    </div>
+    <span class="title">{contents[$activeIndex].title}</span>
   </nav>
 
   <div class="wrapper-container">
@@ -47,7 +58,7 @@
 	    <h1># Seja bem-vindo.</h1>
 	    <p>Explore a história das vulnerabilidades da computação utilizando a linha do tempo à direita.</p>
 	    {#if $innerWidth >= 1000}
-	      <p>Para começar, segure [SHIFT] e efetue a rolagem da página com o [SCROLL] do mouse.</p>
+	      <p>Para começar, segure <span><pre>[SHIFT]</pre></span> e efetue a rolagem da página com o [SCROLL] do mouse.</p>
 	    {:else}
 	      <p>Para começar, avance para a direita deslizando a tela.</p>
 	    {/if}
@@ -59,10 +70,12 @@
 	  <p>[Desenvolvido por Timehack | USP-ICMC]</p>
 	</div>
       </section>
+      
       <div style={`flex: 1; position: relative; width: ${CONTAINER_SIZE}px;`}>
 	<Slots />
 	<Timeline />
       </div>
+      
       <div class="end" style={`width: ${SLOT_SIZE - (SLOT_SIZE / 4)}px`}>
 	<h1>fim da linha do tempo</h1>
       </div>
@@ -86,22 +99,34 @@
     overflow-x: auto;
   }
 
-  .header-navigation {
+  .title {
+    color: #000;
+    width: 100%;
+    text-align: center;
+    background-color: #00ff10;
+    font-size: 1.25rem;
+  }
+
+  .header {
     position: fixed;
     top: 1rem;
     left: 50%;
     transform: translateX(-50%);
     max-width: 20rem;
-    overflow-x: auto;
-    height: 2.5rem;
     background-color: #000;
     border: 3px solid #00ff10;
     z-index: 100;
     box-shadow: 0 0 2px #00ff10, 0 0 4px #00ff10;
+    display: grid;
+    justify-items: center;
 
     @media (max-width: 800px) {
-      height: 2rem;
       top: 0.5rem;
+    }
+
+    .navigation {
+      overflow-x: auto;
+      max-width: 100%;
     }
 
     ol {
@@ -128,10 +153,7 @@
 	color: #000;
       }
 
-      @media (max-width: 800px) {
-	font-size: 1rem;
-	min-width: 4rem;
-      }
+
     }
 
     button {
@@ -171,8 +193,9 @@
   }
 
   .home {
-    width: 30rem;
-    margin-right: 15rem;
+    width: 50rem;
+    margin-right: 40rem;
+    margin-top: 3rem;
 
     .home-content {
       gap: 1rem;
@@ -182,7 +205,9 @@
     }
 
     @media (max-width: 800px) {
-      /* margin-right: 10rem; */
+      margin-right: 20rem;
+      width: 20rem;
+      
       .home-content {
 	max-width: calc(100vw - 2rem);
       }

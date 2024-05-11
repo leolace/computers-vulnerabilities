@@ -7,7 +7,6 @@
 
 
 <section class="container" style={`max-width: ${SLOT_SIZE}px`}>
-  <h2>{content.title}</h2>
   <div class="content">
     <div class="col">
       <p>{content.text[0]}</p>
@@ -26,6 +25,7 @@
 
 <style lang="scss">
   .container {
+    /* margin-top: 4rem; */
     display: flex;
     flex-direction: column;
     gap: 2rem;

@@ -5,9 +5,9 @@
 
   export let SCROLL_AMOUNT: number;
 
-  const getOffset: number = () => {
-    if ($innerWidth >= 1000) return 0;
-    return 500 / ($innerWidth / 500);
+  const getOffset = (): number => {
+    if ($innerWidth >= 1000) return 1000 / ($innerWidth / 1000);
+    return 450 / ($innerWidth / 450);
   }
   
   const slideTimeline = (e) => {
@@ -18,7 +18,7 @@
 
   onMount(() => {
     $scrollContainer.scrollTo(0, 0);
-    
+
     const scroll = (e: WheelEvent) => {
       slideTimeline(e);
     };

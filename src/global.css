@@ -49,3 +49,8 @@ li, ul, ol {
   list-style: none;
 }
 
+pre {
+  display: inline;
+  background-color: #222;
+  padding: 0 0.5rem;
+}
