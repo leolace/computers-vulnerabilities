@@ -46,9 +46,7 @@
     </div>
     
   </div>
-  <!-- <div class="reset" style={`left: ${$scrollX}px`}> -->
-    <!-- <button on:click={resetTimeline}>voltar</button> -->
-    <!-- </div> -->
+
 </div>
 
 <style lang="scss">
@@ -57,6 +55,11 @@
     bottom: 5rem;
     width: 100%;
     z-index: 1;
+    transition: 0.5s linear bottom;
+
+    &.hidden {
+      bottom: -100%;
+    }
   }
 
   .reset {

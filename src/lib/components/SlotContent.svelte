@@ -1,6 +1,8 @@
 <script lang="ts">
   import { SLOT_SIZE } from "$lib/data/constants";
   import type {IContent} from "$lib/data/data"
+	import Image from "./Image.svelte";
+	import Video from "./Video.svelte";
   export let content: IContent;
 
 </script>
@@ -11,10 +13,10 @@
     <div class="col">
       <p>{content.text[0]}</p>
 
-      <img src={content.imageUrl} alt={content.title}/>
+      <Image src={content.imageUrl} alt={content.title}/>
     </div>
     <div class="col">
-      <iframe src={`https://www.youtube.com/embed/${content.videoYoutubeCode[1]}`} title="YouTube video player" frameborder="0" allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+      <Video videoYoutube={content.videoYoutube}/>
       <p>{content.text[1]}</p>
     </div>
     <div class="col">

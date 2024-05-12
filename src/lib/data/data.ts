@@ -1,9 +1,9 @@
 export interface IContent {
-	year: number
-	title: string
-	text: [string, string, string]
-	imageUrl: string
-	videoYoutubeCode: [string, string]
+  year: number
+  title: string
+  text: [string, string, string]
+  imageUrl: string
+  videoYoutube: {code: string, title: string}
 }
 
 export const contents: IContent[] = [
@@ -18,12 +18,12 @@ Ao infectar um computador, o Creeper exibia a mensagem: 'Eu sou o Creeper, pegue
 ausar danos, o Creeper demonstrava a viabilidade de programas autopropagáveis e a necessidade de medidas de segurança em redes de computadores.`
     ],
     imageUrl: "https://beaver.my/wp-content/uploads/2023/04/Creeper-Virus-Catch-Me-If-You-Can-min-1024x536.png",
-    videoYoutubeCode: ["Ml4bgx8ZN9Q", "q6t9aNRQBG0"]
+    videoYoutube: {code: "q6t9aNRQBG0", title: "TechHistory: Origins of the Computer Virus - The TWS Channel"}
   },
-  { year: 1976, title: 'Teste', text: ["", "", ""], imageUrl: "", videoYoutubeCode: ["", ""] },
-  { year: 1980, title: 'Virus', text: ["", "", ""], imageUrl: "", videoYoutubeCode: ["", ""] },
-  { year: 2001, title: 'Malware', text: ["", "", ""], imageUrl: "", videoYoutubeCode: ["", ""] },
-  { year: 2007, title: 'Creeper', text: ["", "", ""], imageUrl: "", videoYoutubeCode: ["", ""] },
-  { year: 2011, title: 'Creeper', text: ["", "", ""], imageUrl: "", videoYoutubeCode: ["", ""] },
+  { year: 1976, title: 'Teste', text: ["", "", ""], imageUrl: "", videoYoutube: {code: "q6t9aNRQBG0", title: "teste"} },
+  { year: 1980, title: 'Virus', text: ["", "", ""], imageUrl: "", videoYoutube: {code: "q6t9aNRQBG0", title: "teste"} },
+  { year: 2001, title: 'Malware', text: ["", "", ""], imageUrl: "", videoYoutube: {code: "q6t9aNRQBG0", title: "teste"} },
+  { year: 2007, title: 'Creeper', text: ["", "", ""], imageUrl: "", videoYoutube: {code: "q6t9aNRQBG0", title: "teste"} },
+  { year: 2011, title: 'Creeper', text: ["", "", ""], imageUrl: "", videoYoutube: {code: "q6t9aNRQBG0", title: "teste"} },
 
 ]

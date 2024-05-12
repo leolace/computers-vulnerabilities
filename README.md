@@ -13,8 +13,9 @@
 - [x] definir template para a disposição das informações em cada ano
 - [x] adicionar o ano correspondente fixo em cada container
 - [x] estilizar container que mostra cada ano (fazer em forma de terminal)
-- [ ] adicionar terminal 
+- [x] adicionar terminal 
 - [ ] adicionar seção de introdução e de fontes/creditos (em forma de terminal)
-- [ ] fazer tela final
-- [ ] o video abre em tela cheia quando o usuario clica (separar iframe em um componente)
+- [x] fazer tela final
+- [x] o video abre em tela cheia quando o usuario clica (separar iframe em um componente)
 - [x] adicionar titulo do slot fixo na navbar
+- [ ] google forms para avaliarem o projeto

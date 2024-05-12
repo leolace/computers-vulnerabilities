@@ -8,6 +8,7 @@
   import Timeline from "$lib/components/Timeline.svelte";
   import Navigation from "$lib/components/Navigation.svelte";
   import Slots from "$lib/components/Slots.svelte"
+	import Terminal from '$lib/components/Terminal.svelte';
   
   const SCROLL_AMOUNT: number = 100;
   $: MARGIN_LEFT = $innerWidth / 3;
@@ -70,8 +71,8 @@
 	    {/if}
 	  </div>
 	  <nav class="links">
-	    <a href="./">## Introdução</a>
-	    <a href="./">## Fontes e créditos</a>
+	    <Terminal contents={[{triggerLabel: "## Introdução", isOpen: false, tab: "Introducao", text: "texto sobre a introdução"}, {triggerLabel: "## Créditos", tab: "CreditosEFontes", isOpen: false, text: "fontes biliograficas"}]}>
+	    </Terminal>
 	  </nav>
 	  <p>[Desenvolvido por Timehack | USP-ICMC]</p>
 	</div>
@@ -82,7 +83,7 @@
 	<Timeline />
       </div>
       
-      <div class="end" style={`width: ${SLOT_SIZE - (SLOT_SIZE / 4)}px`}>
+      <div class="end">
 	<h1>fim da linha do tempo</h1>
       </div>
     </section>
@@ -90,11 +91,15 @@
 </main>
 
 <style lang="scss">
-  h1 {
+  h1, h2 {
     color: #00ff10;
     font-weight: 500;
     text-shadow: 0 0 3px #00ff10, 0 0 6px #00ff10;
     font-size: 1.75rem;
+  }
+
+  h2 {
+    font-size: 1.25rem;
   }
 
   main {
@@ -108,9 +113,14 @@
   .title {
     color: #000;
     width: 100%;
+    font-weight: 700;
     text-align: center;
     background-color: #00ff10;
-    font-size: 1.25rem;
+    font-size: 1.5rem;
+
+    @media (max-width: 800px) {
+      font-size: 1.25rem;
+    }
   }
 
   .header {
@@ -118,7 +128,7 @@
     top: 1rem;
     left: 50%;
     transform: translateX(-50%);
-    max-width: 20rem;
+    max-width: 30rem;
     background-color: #000;
     border: 3px solid #00ff10;
     z-index: 100;
@@ -127,7 +137,11 @@
     justify-items: center;
 
     @media (max-width: 800px) {
-      top: 0.5rem;
+      width: 100vw;
+      max-width: unset;
+      top: 0;
+      left: 0;
+      transform: translateX(0);
     }
 
     .navigation {
@@ -152,9 +166,10 @@
     button {
       color: #00ff10;
       font-size: 1.25rem;
-      font-weight: 500;
+      font-weight: 600;
       cursor: pointer;
       flex: 1;
+      min-height: 1.75rem;
       min-width: 5rem;
       height: 100%;
       display: block;
@@ -169,6 +184,11 @@
       &:hover, &.active {
 	background-color: #00ff10;
 	color: #000;
+      }
+
+      @media (max-width: 800px) {
+	font-size: 1rem;
+	min-width: 4rem;
       }
 
     }
@@ -188,6 +208,7 @@
 
   .end {
     margin-left: 10rem;
+    width: 100vw;
   }
   
   .scroll-container {
