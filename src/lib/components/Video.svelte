@@ -14,6 +14,7 @@
   <div class="video">
     <header>
       <h3>{videoYoutube.title}</h3>
+      <button on:click={() => isActive = false}>X</button>
     </header>
     {#if isActive}
       <iframe src={`https://www.youtube.com/embed/${videoYoutube.code}`} title="YouTube video player" frameborder="0" allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
@@ -33,8 +34,24 @@
 
     header {
       background-color: #00ff10;
+      min-height: 2rem;
+      gap: 1rem;
       width: 100%;
+      padding: 0 0.5rem;
+      display: grid;
+      grid-template-columns: 1fr auto;
       text-align: center;
+
+      button {
+	background-color: transparent;
+	height: 100%;
+	outline: none;
+	border: none;
+	font-size: 1.5rem;
+	justify-self: end;
+	font-weight: 600;
+	cursor: pointer;
+      }
     }
 
     .video {

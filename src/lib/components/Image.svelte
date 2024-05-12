@@ -13,8 +13,11 @@
 </div>
 <dialog open={isActive}>
   <div class="background" on:click={() => isActive = false}></div>
-
+  
   <div class="img">
+    <header>
+      <button on:click={() => isActive = false}>X</button>
+    </header>
     {#if isActive}
       <img {src} {alt}/>
     {/if}
@@ -32,8 +35,28 @@
     z-index: 1000;
     background-color: transparent;
 
+    header {
+      background-color: #00ff10;
+      height: 2rem;
+      width: 100%;
+      padding: 0 0.5rem;
+      display: grid;
+
+      button {
+	background-color: transparent;
+	height: 100%;
+	outline: none;
+	border: none;
+	font-size: 1.5rem;
+	justify-self: end;
+	font-weight: 600;
+	cursor: pointer;
+      }
+    }
+
     .img {
       display: flex;
+      flex-direction: column;
       width: 80%;
       height: fit-content;
       top: 50%;
@@ -43,6 +66,7 @@
       justify-content: center;
       position: absolute;
       z-index: 1001;
+      border: 2px solid #00ff10;
 
       @media (max-width: 800px) {
 	width: 95%;
