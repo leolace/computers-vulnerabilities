@@ -6,6 +6,8 @@
 - [x] melhorar estilização
 - [x] melhorar fim da linha do tempo (definir limite)
 - [x] navbar não scrolla quando o ano muda
+- [ ] variavel global para o gap entre cada slot
+- [ ] melhorar estilização do image terminal
 
 ## features
 - [x] definir tamanho dinamico para o container global

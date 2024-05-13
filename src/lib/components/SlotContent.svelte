@@ -1,14 +1,17 @@
 <script lang="ts">
-  import { SLOT_SIZE } from "$lib/data/constants";
+  import { SLOT_SIZE, CONTAINER_SIZE } from "$lib/data/constants";
   import type {IContent} from "$lib/data/data"
-	import Image from "./Image.svelte";
-	import Video from "./Video.svelte";
+  import {contents} from "$lib/data/data"
+  import Image from "./Image.svelte";
+  import Video from "./Video.svelte";
   export let content: IContent;
+
+  console.log(SLOT_SIZE)
 
 </script>
 
 
-<section class="container" style={`max-width: ${SLOT_SIZE}px`}>
+<section class="container" style={`min-width: ${SLOT_SIZE}px; max-width: ${SLOT_SIZE}px`}>
   <div class="content">
     <div class="col">
       <p class="text">{content.text[0]}</p>

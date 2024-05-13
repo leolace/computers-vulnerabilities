@@ -8,19 +8,19 @@
   import Timeline from "$lib/components/Timeline.svelte";
   import Navigation from "$lib/components/Navigation.svelte";
   import Slots from "$lib/components/Slots.svelte"
-	import Terminal from '$lib/components/Terminal.svelte';
+  import Terminal from '$lib/components/Terminal.svelte';
   
   const SCROLL_AMOUNT: number = 100;
   $: MARGIN_LEFT = $innerWidth / 3;
 
   const moveTo = (i: number) => {
-    $scrollContainer.scrollTo({left: (i * SLOT_SIZE) + (SLOT_SIZE / 3), behavior: "smooth"})
+    $scrollContainer.scrollTo({left: (i * SLOT_SIZE) + (16 * 30 * i) + (SLOT_SIZE / 2), behavior: "smooth"})
   };
 
   let navBarRef: HTMLElement;
 
   $: isActive = (i: number) => {
-    return $scrollX <= SLOT_SIZE * (i + 1) && $scrollX >= SLOT_SIZE * i 
+    return $activeIndex === i && $scrollX >= SLOT_SIZE * i 
   }
 
   $: {

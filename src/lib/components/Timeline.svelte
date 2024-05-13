@@ -16,23 +16,28 @@
     window.scrollTo({ left: 0, top: 0, behavior: 'instant' });
   };
 
-  const moveTo = (i: number) => { $scrollContainer.scrollTo({left: (i * SLOT_SIZE) + (SLOT_SIZE / 3), behavior: "smooth"}) };
+  const moveTo = (i: number) => { $scrollContainer.scrollTo({left: (i * SLOT_SIZE + (16 * 30)) + (SLOT_SIZE / 3), behavior: "smooth"}) };
 
+  // (30 * 16 * i) = 16rem de gap entre cada slot
   $: isActive = (i: number) => {
     if (i === 0) {
       return i * SLOT_SIZE <= $scrollX - ((SLOT_SIZE - 100) / 2)
     }
-    return i * SLOT_SIZE + (30 * 16) <= $scrollX - ((SLOT_SIZE - 100) / 2)
+    return i * SLOT_SIZE + (30 * 16 * i) <= $scrollX - ((SLOT_SIZE - 100) / 2)
   };
-  $: $activeIndex = Math.trunc($scrollX / SLOT_SIZE)
+
+
+  // (30 * 16 * i) = 16rem de gap entre cada slot
+  $: $activeIndex = Math.trunc($scrollX / (SLOT_SIZE + 16 * 30))
 
   $: leftValue = $scrollX < 0 ? 0 : $scrollX;
 
+  // (30 * 16 * i) = 16rem de gap entre cada slot
   const getGapMiddlePoints = (i: number) => {
     if (i === 0) {
-      return (i * SLOT_SIZE) + SLOT_SIZE / 2
+      return (i * SLOT_SIZE) + (SLOT_SIZE / 2)
     }
-    return (i * SLOT_SIZE + (30 * 16)) + SLOT_SIZE / 2
+    return (i * SLOT_SIZE + (30 * 16 * i)) + (SLOT_SIZE / 2)
   }
 
 </script>

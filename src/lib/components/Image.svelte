@@ -58,7 +58,7 @@
       display: flex;
       flex-direction: column;
       width: 80%;
-      height: fit-content;
+      height: 80%;
       top: 50%;
       left: 50%;
       transform: translate(-50%, -50%);
@@ -71,11 +71,6 @@
       @media (max-width: 800px) {
 	width: 95%;
 	height: fit-content;
-      }
-      
-
-      iframe {
-	pointer-events: auto;
       }
     }
 
@@ -100,9 +95,9 @@
       height: 100%;
       width: 100%;
       pointer-events: none;
+      object-fit: cover;
 
       @media (max-width: 1200px) {
-      object-fit: contain;
 	height: 100%;
       }
 

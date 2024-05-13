@@ -33,7 +33,7 @@
     padding-top: 5rem;
 
     @media (max-width: 800px) {
-      gap: 20rem;
+      /* gap: 20rem; */
     }
   }
 
