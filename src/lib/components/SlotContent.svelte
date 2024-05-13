@@ -11,16 +11,15 @@
 <section class="container" style={`max-width: ${SLOT_SIZE}px`}>
   <div class="content">
     <div class="col">
-      <p>{content.text[0]}</p>
-
+      <p class="text">{content.text[0]}</p>
       <Image src={content.imageUrl} alt={content.title}/>
     </div>
     <div class="col">
       <Video videoYoutube={content.videoYoutube}/>
-      <p>{content.text[1]}</p>
+      <p class="text">{content.text[1]}</p>
     </div>
     <div class="col">
-      <p>{content.text[2]}</p>
+      <p class="text">{content.text[2]}</p>
     </div>
   </div>
 </section>
@@ -38,6 +37,8 @@
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
     gap: 5rem;
+    height: 80%;
+    align-content: space-around;
 
     .col {
       display: grid;
@@ -45,10 +46,12 @@
       justify-items: center;
     }
 
-    .texts {
-      display: grid;
-      gap: 2rem;
-      justify-items: center;
+    .text {
+      font-size: 1.25rem;
+    }
+
+    @media (max-width: 800px) {
+      gap: 3rem;
     }
   }
 

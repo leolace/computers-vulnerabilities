@@ -29,7 +29,7 @@
     display: flex;
     height: 100%;
     width: 100%;
-    gap: 50rem;
+    gap: 30rem;
     padding-top: 5rem;
 
     @media (max-width: 800px) {

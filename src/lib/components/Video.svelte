@@ -78,7 +78,8 @@
       iframe {
 	grid-area: 1 / -1;
 	pointer-events: auto;
-	height: 40rem;
+	height: 80dvh;
+
 
 	@media (max-width: 1300px) {
 	  height: 30rem;
@@ -102,13 +103,8 @@
   
   .container {
     cursor: pointer;
-    height: 22rem;
+    height: 15rem;
     aspect-ratio: 16 / 9;
-
-    @media (max-width: 800px) {
-      height: 20rem;
-      
-    }
   }
 
   iframe {

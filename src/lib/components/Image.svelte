@@ -91,13 +91,9 @@
 
     .container {
       cursor: pointer;
-      height: 22rem;
+      height: 15rem;
       aspect-ratio: 16 / 9;
 
-      @media (max-width: 800px) {
-	height: 20rem;
-	
-      }
     }
 
     img {

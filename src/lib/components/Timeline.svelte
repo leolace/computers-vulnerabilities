@@ -18,10 +18,22 @@
 
   const moveTo = (i: number) => { $scrollContainer.scrollTo({left: (i * SLOT_SIZE) + (SLOT_SIZE / 3), behavior: "smooth"}) };
 
-  $: isActive = (i: number) => i * SLOT_SIZE <= $scrollX - ((SLOT_SIZE - 100) / 2);
+  $: isActive = (i: number) => {
+    if (i === 0) {
+      return i * SLOT_SIZE <= $scrollX - ((SLOT_SIZE - 100) / 2)
+    }
+    return i * SLOT_SIZE + (30 * 16) <= $scrollX - ((SLOT_SIZE - 100) / 2)
+  };
   $: $activeIndex = Math.trunc($scrollX / SLOT_SIZE)
 
   $: leftValue = $scrollX < 0 ? 0 : $scrollX;
+
+  const getGapMiddlePoints = (i: number) => {
+    if (i === 0) {
+      return (i * SLOT_SIZE) + SLOT_SIZE / 2
+    }
+    return (i * SLOT_SIZE + (30 * 16)) + SLOT_SIZE / 2
+  }
 
 </script>
 
@@ -37,7 +49,7 @@
     </div>
     <div class="middle-point-container">
       {#each Array(contents.length) as _, i}
-	<div class="middle-point" style={`left: ${(i * SLOT_SIZE) + SLOT_SIZE / 2}px`}>
+	<div class="middle-point" style={`left: ${getGapMiddlePoints(i)}px`}>
 	  <span class={`${isActive(i) ? "active" : ""}`}>
 	    <p>{contents[$activeIndex].year}</p>
 	  </span>

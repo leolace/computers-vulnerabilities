@@ -18,4 +18,6 @@
 - [x] fazer tela final
 - [x] o video abre em tela cheia quando o usuario clica (separar iframe em um componente)
 - [x] adicionar titulo do slot fixo na navbar
-- [ ] google forms para avaliarem o projeto
+- [ ] adicionar google forms para avaliarem o projeto
+- [ ] adicionar botao de ver mais (abrir no terminal)
+- [ ] adicionar todo o conteudo

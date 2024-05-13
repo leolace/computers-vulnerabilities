@@ -1,7 +1,7 @@
 import { innerWidth } from "$lib/stores/store";
 import { contents } from "./data"
 
-const getSlotSize = () => {
+const getSlotSize = (innerWidth) => {
   return contents.length * 2500;
 };
 
