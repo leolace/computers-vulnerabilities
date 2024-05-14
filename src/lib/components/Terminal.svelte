@@ -38,9 +38,7 @@
       
       <article contenteditable={true} on:focus={() => isInsertMode = true} on:blur={() => isInsertMode = false}>
 	<div class="code">
-	  <div class="code-content">
-	    {content.text}
-	  </div>
+	  {@html content.text}
 	</div>
       </article>
 
@@ -177,17 +175,13 @@
     color: #eee;
     outline: none;
     overflow-y: auto;
-    text-shadow: 0 0 1px #eee, 0 0 4px #eee;
+    text-shadow: 0 0 0px #eee, 0 0 0px #eee;
   }
 
   .code {
     height: 100%;
     width: 100%;
     min-height: 100rem;
-
-    .code-content {
-
-    }
   }
 
   footer {
