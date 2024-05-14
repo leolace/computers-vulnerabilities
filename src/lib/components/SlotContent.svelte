@@ -23,7 +23,7 @@
     <div class="col">
       <p class="text">{content.text[2]}</p>
       <!-- <button class="saiba-mais-btn">Saiba mais</button> -->
-      <Terminal contents={[{triggerLabel: "Saiba mais...", tab: content.title, text: "", isOpen: false}]}/>
+      <Terminal contents={[{triggerLabel: "Saiba mais...", tab: content.title, text: content.readMore, isOpen: false}]}/>
     </div>
   </div>
 </section>

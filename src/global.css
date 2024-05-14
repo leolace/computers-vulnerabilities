@@ -45,10 +45,10 @@ p {
   }
 }
 
-li, ul, ol {
-  text-decoration: none;
-  list-style: none;
-}
+/* li, ul, ol { */
+/*   text-decoration: none; */
+/*   list-style: none; */
+/* } */
 
 pre {
   display: inline;
