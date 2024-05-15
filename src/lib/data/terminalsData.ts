@@ -76,6 +76,153 @@ Usuários começaram a desinstalar o software em massa, e a empresa por trás do
 </p>
 </div>
 `,
+  chernobyl: `
+<div>
+<p style="font-size: 1.75rem; margin-bottom: 1rem">
+O vírus Chernobyl foi criado especificamente para atingir os sistemas operacionais Windows 95, 98 e ME. Seu funcionamento dava em sua capacidade de infiltrar no sistema e deletar ou corromper os arquivos essenciais para o funcionamento do computador sendo ele do sistema ou da própria BIOS, injetando códigos maliciosos, que preveniam que o sistema pudesse ser inicializado corretamente, o que no caso precisaria de regravar a BIOS ou até mesmo em alguns casos trocar fisicamente a BIOS do computador, que para a época não era tão acessível.
+</p>
+
+<p style="font-size: 1.75rem; margin-bottom: 1rem">
+Diferentemente dos outros malwares que se instalam seu código malicioso no começo ou no final de um programa já existente, o vírus Chernobyl procura por lacunas no meio do código, que caiba o comando malicioso, entrando na categoria de spacefiller, que como o próprio nome sugere, preenche os espaços de um código, o que o ajuda a se esconder dos antivírus, já que dessa forma ele não aumentaria o tamanho do arquivo do programa.
+</p>
+
+<p style="font-size: 1.75rem; margin-bottom: 1rem">
+Chen Ing-Hau foi identificado e preso em 2000, mas depois de alguns dias na cadeia, ele saiu em condicional, onde após sua liberação, Chen Ing-Hau contribuiu com as autoridades para criar um software que pudesse combater vírus de tipos semelhantes, onde mais tarde criou sua própria empresa de segurança de computadores, criando algoritmos para identificar e exterminar malwares.
+</p>
+
+<p style="font-size: 1.75rem; margin-bottom: 1rem">
+Um legado que Chen Ing-Hau inspirou nos jovens que vieram depois, foi a não só criar malwares pelo mal e destruição, mas também expor falhar e contribuir também com uma forma de se  defender contra esse tipo de ataque, melhorando a segurança cibernética.
+</p>
+</div>
+`,
+  iloveyou: `
+<ul style="list-style-type: disc!important; list-style: auto!important; margin-left: 2.5rem; display: grid; gap: 1rem">
+<li>
+Ele fazia uma cópia de si mesmo várias vezes e as escondia em diversas pastas no disco rígido.
+</li>
+<li>
+Ele acrescentava novos arquivos nas chaves de registro da vítima.
+</li>
+<li>
+Ele substituía vários tipos diferentes de arquivos com cópias de si mesmo.
+</li>
+<li>
+Ele enviava uma cópia de si através de clientes de Internet Relay Chat (IRC) e também via e-mail.
+</li>
+<li>
+Ele baixava da Internet um arquivo chamado WIN-BUGSFIX.EXE e o executava. Ao invés de consertar bugs, esse programa era um aplicativo que roubava senhas e enviava informações secretas para o hacker.
+</li>
+</ul>
+
+<p style="font-size: 1.75rem; margin-bottom: 0.5rem">
+O Love Bug explorou uma falha específica no Microsoft Outlook 98 e 99, versões populares do software de email na época. A vulnerabilidade permitia que o vírus fosse executado automaticamente ao abrir o anexo infectado, sem que o usuário precisasse clicar em nenhum link ou realizar qualquer ação adicional. Essa estratégia simples, mas eficaz, permitiu que o Love Bug se espalhasse rapidamente, infectando milhões de computadores em todo o mundo em apenas algumas horas.
+</p>
+
+<p style="font-size: 1.75rem; margin-bottom: 0.5rem">
+O impacto do Love Bug foi global e devastador. Empresas de todos os tamanhos, desde grandes corporações multinacionais até pequenas empresas locais, foram afetadas pelo vírus. O Departamento de Defesa dos Estados Unidos, o Parlamento Britânico, a Microsoft e muitas outras instituições de renome tiveram seus sistemas comprometidos, causando prejuízos estimados em bilhões de dólares.
+</p>
+
+<p style="font-size: 1.75rem; margin-bottom: 0.5rem">
+O Love Bug não apenas causou danos financeiros, mas também gerou caos e frustração em todo o mundo. Funcionários perderam horas de trabalho tentando recuperar dados perdidos, empresas tiveram que interromper suas operações e a confiança na internet foi abalada. O vírus se tornou um símbolo da vulnerabilidade do mundo digital e da necessidade de medidas de segurança mais robustas.
+</p>
+
+<p style="font-size: 1.75rem; margin-bottom: 0.5rem">
+O Love Bug foi criado por Onel de Guzman, um jovem programador filipino de 24 anos na época. As motivações de Guzman permanecem incertas. Alguns acreditam que ele pretendia apenas chamar atenção e ganhar notoriedade, enquanto outros especulam que ele tinha intenções financeiras, buscando extorquir dinheiro de empresas afetadas pelo vírus.
+</p>
+
+<p style="font-size: 1.75rem; margin-bottom: 0.5rem">
+Independentemente de suas motivações, Guzman foi preso em 2000 e condenado a 10 anos de prisão por criar o Love Bug. O caso serviu como um lembrete da gravidade dos crimes cibernéticos e da necessidade de responsabilizar os autores de tais ataques.
+</p>
+
+`,
+  codered: `
+<p style="font-size: 1.75rem; margin-bottom: 0.5rem">
+Code Red explorava uma falha de segurança chamada “buffer overflow”, que acontecia quando o computador tentava guardar no buffer, mais dados do que sua capacidade máxima, fazendo com que os caracteres depois do “estouro” do buffer ser considerado como comando de instruções, onde no caso era inserido o código malicioso. O que era feito para esgotar esse limite do buffer é a inserção de um caractere repetido, como vários “N”s, e logo no final desses caracteres o comando que vai inserir o malware do Code Red.
+</p>
+
+<p style="font-size: 1.75rem; margin-bottom: 0.5rem">
+Os computadores infectados, além de ficarem lentos e com o tráfego de dados congestionados , mostrava na tela da pessoa um aviso, mostrando para  o usuário que ele tinha sido invadido, e que seu computador estava sendo hackeado. A mensagem dizia que o computador tinha sido hackeado pelos chineses (“Hacked by Chineses”).
+</p>
+
+<p style="font-size: 1.75rem; margin-bottom: 0.5rem">
+O Code red rodava totalmente na memória, então não deixavam ou prejudicavam os arquivos pessoais do computador, mas com a quantidade de de requisições que o sistema fazia, podiam haver travamentos por falta de processamento ou memória, que junto com a utilização do computador podiam resultar no computador reiniciando por falta de memória, embora esse não fosse o desejado, porque quanto mais computadores ligados, mais forte o ataque era.
+</p>
+
+<p style="font-size: 1.75rem; margin-bottom: 0.5rem">
+O Code red tinha uma rotina execução, que dependia do dia que estava, onde entre os dias 1 a 19 de cada mês, o malware tinha como foco a varredura, propagação do worm e o envio de solicitações para IP aleatórios, entre os dias 20 a 27, o malware causava o ataque de DDoS em IP definidos e nos outros dias do mês o malware não fazia nada, ficava hibernando esperando o próximo dia 1 para continuar seu funcionamento.
+</p>
+
+<p style="font-size: 1.75rem; margin-bottom: 0.5rem">
+Na semana em que o código foi rodado, mais de 300,000 computadores tinham sido infectados, e serviam como host para o ataque de DDoS. Os criadores desse malware nunca foram identificados, mas o que eles mostraram é a necessidade de tratar as informações que o usuário pode inserir, garantindo que junto com qualquer tipo de dado, o usuário não seja capaz de criar uma brecha para ser adicionado um código malicioso.
+</p>
+`,
+  sqlslammer: `
+<p style="font-size: 1.75rem; margin-bottom: 0.5rem">
+O SQL Slammer serviu como um rude despertador para a fragilidade da era digital. Sua rápida propagação expôs a vulnerabilidade da infraestrutura online e a necessidade de medidas de segurança mais robustas. O ataque também demonstrou o potencial de worms como armas cibernéticas, capazes de causar danos em larga escala em um curto período de tempo. A crescente interconectividade e a proliferação de dispositivos aumentam a superfície de ataque para ciberataques. A necessidade de uma cooperação internacional mais eficaz para combater ameaças online e desenvolver mecanismos de defesa mais resilientes torna-se cada vez mais crucial.
+</p>
+
+<p style="font-size: 1.75rem; margin-bottom: 0.5rem">
+Parece que o autor do worm estava no processo de otimização de seu algoritmo de propagação de rede pseudo-aleatória e provavelmente pretendia incorporar um atraso de propagação razoável posteriormente no processo de desenvolvimento.
+</p>
+
+<p style="font-size: 1.75rem; margin-bottom: 0.5rem">
+Foi teorizado que o autor do worm (que era, devemos lembrar, um criminoso que procurava comprometer ilegalmente servidores vulneráveis ​​para fins nefastos) acidentalmente conectou uma rede de desenvolvimento privada a uma rede conectada à Internet, e que uma cópia do worm em execução no ambiente de desenvolvimento foi capaz de escapar para a natureza e começar a se espalhar pela Internet global em velocidade recorde, causando estragos generalizados ao longo do caminho.
+</p>
+
+<p style="font-size: 1.75rem; margin-bottom: 0.5rem">
+Que muitos especialistas em operações de segurança teorizaram que algum dia ocorreria. Em outras palavras, o tráfego disruptivo da Internet não visa nenhum host ou rede específico, mas sim um ataque DDoS gratuito para todos.
+</p>
+`,
+  nimda: `
+<p style="font-size: 1.75rem; margin-bottom: 0.5rem">
+Este worm foi mitigado pelas atualizações dos antivírus, desfazendo as alterações de arquivos do sistema infectados. Também poderia ser feita uma mitigação manual, na qual o usuário remove as permissões de administrador do usuário guest, altera os arquivos modificados pelo worm e altera os processos de auto execução afetados pelo malware.
+</p>
+`,
+
+  klez: `
+<h2 style="font-size: 2.5rem; font-weight: 500; margin-bottom: 1rem"># Exemplo de e-mail</h2>
+
+<p style="font-size: 1.75rem; margin-bottom: 0.5rem">Assunto: Work Klez.E Immunity</p>
+<p style="font-size: 1.75rem; margin-bottom: 0.5rem">O Klez.E é o worm de disseminação mundial mais comum. É muito perigoso, pois corrompe seus arquivos. Devido à sua técnica de furtividade e anti-antivírus muito inteligente, a maioria dos softwares antivírus comuns não consegue detectá-lo ou limpá-lo. Desenvolvemos esta ferramenta de imunidade gratuita para derrotar o vírus malicioso. Você só precisa executar esta ferramenta uma vez, e então o Klez nunca entrará no seu PC. NOTA: Como esta ferramenta atua como um falso Klez para enganar o worm real, alguns monitores de antivírus podem emitir um aviso quando você a executa. Se isso acontecer, ignore o aviso e selecione 'continuar'. Se você tiver alguma dúvida, por favor, envie-me um e-mail.</p>
+<p style="font-size: 1.75rem; margin-bottom: 0.5rem">Este worm procura arquivos com as seguintes extensões: .txt .htm .html .wab .asp .doc .rtf .xls .jpg .cpp .c .pas .mpg .mpeg .bak .mp3 .pdf</p>
+<p style="font-size: 1.75rem; margin-bottom: 0.5rem">Dependendo de várias condições, o Klez.h anexa um arquivo com uma das extensões listadas acima aos e-mails infectados (como o segundo arquivo anexado). Como resultado, informações confidenciais ou pessoais podem ser enviadas e tornadas públicas.</p>
+`,
+  mydoom: `
+<p style="font-size: 1.75rem; margin-bottom: 0.5rem">A segunda variante do Mydoom, o Mydoom.B, bloqueava o acesso da vítima a sites de antivírus, na tentativa de impedir a limpeza dos computadores comprometidos. Além disso, o Mydoom.B enviava requisições de acesso a páginas da Microsoft, a fim de derrubar os serviços da empresa.</p>
+<p style="font-size: 1.75rem; margin-bottom: 0.5rem">Por fim, o Mydoom.C era capaz de contaminar apenas computadores já comprometidos pelo Mydoom.A. Ele não se propagava através de e-mails; ele vasculhava endereços IP buscando máquinas com o backdoor criado por outra variante do worm. As máquinas com o Mydoom.C eram transformadas em zumbis, máquinas a serviço do atacante, utilizadas para promover ataques contra a Microsoft.</p>`,
+  sasser: `
+<p style="font-size: 1.75rem; margin-bottom: 0.5rem">A propagação do worm abria um serviço File Transfer Protocol (FTP), protocolo utilizado para realizar transferência de arquivos, na porta 5554, iniciava seu processo de propagação, fazendo as devidas alterações para que o computador não pudesse ser reiniciado durante esse processo.</p>
+<p style="font-size: 1.75rem; margin-bottom: 0.5rem"> Depois disso, enviava solicitações Transmission Control Protocol (TCP), protocolo utilizado para estabelecer transmissão de dados entre duas máquinas garantindo que não há perda de dados, na porta 445 de computadores encontrados pela varredura de endereços IP do computador. Se o computador contaminado encontrasse um computador com a vulnerabilidade LSASS, essa máquina receberia o worm com o nome “{número aleatório}_up.EXE”. Uma máquina poderia receber o worm múltiplas vezes e teria vários arquivos diferentes no formato “{número aleatório}_up.EXE”.</p>
+<p style="font-size: 1.75rem; margin-bottom: 0.5rem">Quando o worm não estava em processo de replicação, o computador reiniciava como resultado da falha no serviço LSASS. A mitigação do worm é feita atualizando o sistema Windows e os antivírus do computador.</p>
+`,
+  conficker: `
+<p style="font-size: 1.75rem; margin-bottom: 0.5rem">Exploração de Vulnerabilidades: O Conficker explorou uma vulnerabilidade crítica no Microsoft Windows (MS08-67) que permitia a execução remota de código. Essa falha, não corrigida por muitos usuários, facilitou a disseminação inicial do worm.</p>
+
+<ul style="list-style-type: disc!important; list-style: auto!important; margin-left: 2.5rem; display: grid; gap: 1rem">
+<li>Propagação Multifacetada: O Conficker utilizou diversos métodos de propagação</li>
+<li>Redes Compartilhadas: O worm se replicava automaticamente em redes locais e unidades USB conectadas.</li>
+<li>Servidores de Comando e Controle (C&C): O Conficker se comunicava com servidores remotos para receber instruções e atualizações.</li>
+<li>Variantes Diversas: O worm evoluiu com o tempo, criando novas variantes com diferentes funcionalidades e métodos de ataque.</li>
+<li>Funções Maliciosas: O Conficker possuía diversas funções maliciosas</li>
+<li>Roubo de Senhas: O worm capturava senhas de usuários e sistemas para obter acesso não autorizado.</li>
+<li>Criação de Botnet: O Conficker transformava computadores infectados em uma botnet sob o controle de seus criadores.</li>
+</ul>
+
+<p style="font-size: 1.75rem; margin-bottom: 0.5rem">O Conficker é um exemplo notável da engenhosidade e persistência dos cibercriminosos. Sua capacidade de se adaptar e explorar novas vulnerabilidades o torna um desafio constante para a segurança cibernética. É fundamental manter-se atualizado sobre as últimas ameaças e implementar medidas de segurança robustas para proteger seus sistemas e dados.</p>
+`,
+  stuxnet: `
+<p style="font-size: 1.75rem; margin-bottom: 0.5rem">O malware Stuxnet, é um código malicioso, escrito com a intenção de destruir componentes físicos, e foi construído para atacar um alvo específico, que foi os sistemas SCADA(Supervisory Control and Data Acquisition) que eram os sistemas que faziam o monitoramento e o processo das centrífugas usadas para o enriquecimento de urânio. O vírus foi desenvolvido para funcionar especificamente em computadores Windows, e explorava o que chamamos de zero-day, que são vulnerabilidades recém descobertas pelos atacantes, assim os desenvolvedores do software tem zero dias para fazer lançar uma correção antes que essa vulnerabilidade seja explorada. O código do Stuxnet tinha múltiplos zero-days, o que o tornava muito mais potente e robusto, e que tornava mais difícil o combate contra ele.
+</p>
+<p style="font-size: 1.75rem; margin-bottom: 0.5rem">O Stuxnet é considerado um vírus do tipo worm, ou seja, tem a capacidade de se replicar e se espalhar para outros computadores por meios definidos. Uma vez que a máquina tinha sido infectada pelo vírus Stuxnet, vírus ficava por alguns dias inativos, colhendo dados e relatórios de funcionamento desse período, onde quando dava uma quantidade de tempo, o ataque começava, onde o vírus sobrescreviam  o código dos PCLs (controladores lógicos programáveis), injetando o código malicioso que alterava o funcionamento automatizado das centrífugas, fazendo-as girar em uma velocidade específica em que a centrífuga entre em ressonância, fazendo vibrar descontroladamente, causando danos físicos à estrutura da centrífugas.</p>
+<p style="font-size: 1.75rem; margin-bottom: 0.5rem">Uma das particularidades deste vírus, que atrasou os técnicos reconhecerem que eram vírus, foi a capacidade do vírus permanecer alguns dias inativo, somente colhendo dados e relatórios de execução, e assim que a quantidade de dias que fossem necessários para coleta de dados fosse suficiente, o ataque começava, rodando o código malicioso, e mandando relatórios de funcionamento normal das centrífugas. Por conta dessa característica de mandar dados e relatórios alterados, foi por um tempo considerado que era erro humano antes da ideia de ser um vírus, o que atrasou na identificação, resultando em mais danos às usinas. Além da capacidade de simular funcionamento normal das centrífugas, o código do Stuxnet possui um certificado autenticado, o que dizia para o sistema que era um software legítimo e aprovado de acordo com as normas, o que ajudou ainda mais o código ser mascarado.</p>
+<p style="font-size: 1.75rem; margin-bottom: 0.5rem">Algumas empresas, como a própria empresa de segurança Kaspersky, ajudaram a identificar e combater esse ataque, que no quesito complexidade e sofisticação do vírus, onde era criado em várias linguagens de programações, e cada uma dela atacava de um jeito, muito provavelmente não foi escrito por qualquer grupo de hackers pequeno, o que poderia significar que tem uma organização maior por trás desse código e ataque. Embora nenhuma pessoa tenha diretamente assumido, há especulações que este malware foi desenvolvido pela aliança de EUA e Israel, para impedir ou atrapalhar o desenvolvimento nuclear de países como o Irã.</p>
+`,
+  petya: `
+<p style="font-size: 1.75rem; margin-bottom: 0.5rem">O NotPetya, lançado no ano seguinte, foi utilizado para atacar organizações na Ucrânia. Estima-se que 2000 organizações foram afetadas por este ransomware. Assim como o Petya, ele também criptografava a MFT do computador da vítima; contudo, o método de criptografia utilizado não permitia a reversão, mesmo que a vítima pagasse o resgate. Além disso, o método de propagação do NotPetya era diferente, utilizando o exploit MS17-010 no EternalBlue.</p>
+<p style="font-size: 1.75rem; margin-bottom: 0.5rem">Este exploit era usado pela National Security Agency (NSA), a Agência Nacional de Segurança dos Estados Unidos, em missões de contraterrorismo e coleta de informações. O EternalBlue foi divulgado em abril de 2017 por um grupo hacker chamado Shadow Brokers, que hackeou a NSA. O exploit aproveita uma vulnerabilidade do Server Message Block version 1 (SMBv1), um protocolo de compartilhamento de arquivos, impressoras e portas, criado em 1983, que não filtra pacotes maliciosos enviados ao servidor atacado.
+</p>
+<p style="font-size: 1.75rem; margin-bottom: 0.5rem">Especialistas em segurança cibernética consideraram que a intenção do NotPetya não era obter o pagamento do resgate, mas realizar um ataque contra organizações ucranianas, disfarçando essa intenção com padrões de ransomware.</p>
+`
   
 }
 
