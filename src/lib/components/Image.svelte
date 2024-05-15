@@ -18,9 +18,11 @@
     <header>
       <button on:click={() => isActive = false}>X</button>
     </header>
-    {#if isActive}
-      <img {src} {alt}/>
-    {/if}
+    <div class="img-content">
+      {#if isActive}
+	<img {src} {alt}/>
+      {/if}
+    </div>
   </div>
 
 </dialog>
@@ -57,8 +59,7 @@
     .img {
       display: flex;
       flex-direction: column;
-      width: 80%;
-      height: 80%;
+      height: 80dvh;
       top: 50%;
       left: 50%;
       transform: translate(-50%, -50%);
@@ -67,11 +68,24 @@
       position: absolute;
       z-index: 1001;
       border: 2px solid #00ff10;
+      background-color: #000;
 
       @media (max-width: 800px) {
 	width: 95%;
 	height: fit-content;
       }
+
+      .img-content {
+	height: 90dvh;
+	width: 60dvw;
+	overflow: hidden;
+
+	@media (max-width: 800px) {
+	  height: fit-content;
+	  width: 90dvw;
+	}
+      }
+
     }
 
     .background {
@@ -95,7 +109,7 @@
       height: 100%;
       width: 100%;
       pointer-events: none;
-      object-fit: cover;
+      object-fit: contain;
 
       @media (max-width: 1200px) {
 	height: 100%;
