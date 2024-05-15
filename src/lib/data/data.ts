@@ -38,7 +38,7 @@ export const contents: IContent[] = [
 Ao infectar um computador, o Creeper exibia a mensagem: 'Eu sou o Creeper, pegue-me se puder!' ("I'm the Creeper, catch me if you can!"); Em cada novo computador infectado, o Creeper tentava se remover do host anterior; Apesar de não causar danos, o Creeper demonstrava a viabilidade de programas autopropagáveis e a necessidade de medidas de segurança em redes de computadores.`
     ],
     imageUrl: creeperImg,
-    videoYoutube: {code: "q6t9aNRQBG0", title: "TechHistory: Origins of the Computer Virus - The TWS Channel"},
+    videoYoutube: {code: "SSPgYAp5EiY", title: "A origem dos vírus de computador - The TWS Channel (legendado)"},
     readMore: readMore.creeper
   },
 
