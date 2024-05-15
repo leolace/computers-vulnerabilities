@@ -90,7 +90,7 @@
       <div class="end">
 	<div class="end-content">
 	  <h2>Você chegou ao fim da linha do tempo das vulnerabilidades da computação!</h2>
-	  <p>Gostou? não deixe de avaliar o nosso projeto</p>
+	  <p>Gostou? não deixe de avaliar a nossa equipe e o projeto</p>
 	  <a href="https://forms.gle/yymif1T8prezKavU8" target="_blank">## Avaliar</a>
 	</div>
       </div>
