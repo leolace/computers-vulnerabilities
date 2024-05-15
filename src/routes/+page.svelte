@@ -21,7 +21,7 @@
   let navBarRef: HTMLElement;
 
   $: isActive = (i: number) => {
-    return $activeIndex === i && $scrollX >= SLOT_SIZE * i 
+    return $activeIndex === i && $scrollX >= SLOT_SIZE * i && $scrollX < CONTAINER_SIZE - 500
   }
 
   $: {
@@ -42,17 +42,20 @@
   <nav class="header">
     <div bind:this={navBarRef} class="navigation">
       <ol>
-      {#each contents as {year}, i}
+	{#each contents as {year}, i}
+	  <li>
+	    <button class={`${isActive(i) ? "active" : ""}`} on:click={() => moveTo(i)}>{year}</button>
+	  </li>
+	{/each}
 	<li>
-	  <button class={`${isActive(i) ? "active" : ""}`} on:click={() => moveTo(i)}>{year}</button>
+	  <button class={`${$scrollX > CONTAINER_SIZE - 500 ? "active" : ""}`} on:click={() => $scrollContainer.scrollTo({left: CONTAINER_SIZE + 1000, behavior: "smooth"})}>Fim</button>
 	</li>
-      {/each}
-    </ol>
+      </ol>
     </div>
     <span class="title">
-      {#if $scrollX > 0}
+      {#if $scrollX > 0 && $scrollX < CONTAINER_SIZE - 500}
 	{contents[$activeIndex].title}
-      {:else}
+      {:else if $scrollX > CONTAINER_SIZE - 500}
 	[Vulcomp]
       {/if}
       </span>
@@ -85,7 +88,11 @@
       </div>
       
       <div class="end">
-	<h1>fim da linha do tempo</h1>
+	<div class="end-content">
+	  <h2>Você chegou ao fim da linha do tempo das vulnerabilidades da computação!</h2>
+	  <p>Gostou? não deixe de avaliar o nosso projeto</p>
+	  <a href="https://forms.gle/yymif1T8prezKavU8" target="_blank">## Avaliar</a>
+	</div>
       </div>
     </section>
   </div>
@@ -210,11 +217,33 @@
   .end {
     margin-left: 10rem;
     width: 100vw;
+    height: 90dvh;
+    display: grid;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+
+    .end-content {
+      display: grid;
+      gap: 1rem;
+    }
+
+    a {
+      color: #00ff10;
+      font-weight: 600;
+      font-size: 1.25rem;
+    }
+
+    h2 {
+      max-width: 50rem;
+      font-size: 2.5rem;
+    }
   }
   
   .scroll-container {
     background: linear-gradient(90deg, #111 20%, #0f0f33 100%);
     padding: 1rem 2rem;
+    padding-right: 0;
     position: relative;
     height: 100dvh;
     display: flex;

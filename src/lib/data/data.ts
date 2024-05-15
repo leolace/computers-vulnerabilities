@@ -184,7 +184,4 @@ Ao infectar um computador, o Creeper exibia a mensagem: 'Eu sou o Creeper, pegue
     videoYoutube: {code: "MT3MwYlJBDU", title: "Trojan.Ransom.Petya - danooct1"},
     readMore: readMore.petya
   },
-
-  // { year: 2011, title: "", text: ["", "", ""], imageUrl: "", videoYoutube: {code: "q6t9aNRQBG0", title: "teste"} },
-
 ]
