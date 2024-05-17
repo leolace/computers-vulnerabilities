@@ -9,7 +9,7 @@
   import Navigation from "$lib/components/Navigation.svelte";
   import Slots from "$lib/components/Slots.svelte"
   import Terminal from '$lib/components/Terminal.svelte';
-	import { textIntroduction } from '$lib/data/terminalsData';
+  import { textIntroduction, textCredits } from '$lib/data/terminalsData';
   
   const SCROLL_AMOUNT: number = 100;
   $: MARGIN_LEFT = $innerWidth / 3;
@@ -75,7 +75,7 @@
 	    {/if}
 	  </div>
 	  <nav class="links">
-	    <Terminal contents={[{triggerLabel: "## Introdução", isOpen: false, tab: "Introducao", text: textIntroduction}, {triggerLabel: "## Créditos", tab: "CreditosEFontes", isOpen: false, text: "fontes biliograficas"}]}>
+	    <Terminal contents={[{triggerLabel: "## Introdução", isOpen: false, tab: "Introducao", text: textIntroduction}, {triggerLabel: "## Créditos", tab: "CreditosEFontes", isOpen: false, text: textCredits}]}>
 	    </Terminal>
 	  </nav>
 	  <p>[Desenvolvido por Timehack | USP-ICMC]</p>

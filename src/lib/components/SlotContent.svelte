@@ -3,7 +3,7 @@
   import type {IContent} from "$lib/data/data"
   import {contents} from "$lib/data/data"
   import Image from "./Image.svelte";
-	import Terminal from "./Terminal.svelte";
+  import Terminal from "./Terminal.svelte";
   import Video from "./Video.svelte";
   export let content: IContent;
 
@@ -22,7 +22,6 @@
     </div>
     <div class="col">
       <p class="text">{content.text[2]}</p>
-      <!-- <button class="saiba-mais-btn">Saiba mais</button> -->
       <Terminal contents={[{triggerLabel: "Saiba mais...", tab: content.title, text: content.readMore, isOpen: false}]}/>
     </div>
   </div>
@@ -30,7 +29,6 @@
 
 <style lang="scss">
   .container {
-    /* margin-top: 4rem; */
     display: flex;
     flex-direction: column;
     gap: 2rem;
@@ -57,27 +55,6 @@
     @media (max-width: 800px) {
       gap: 3rem;
     }
-  }
-
-  iframe, img {
-    height: 22rem;
-    aspect-ratio: 16 / 9;
-
-    @media (max-width: 800px) {
-      height: 20rem;
-    }
-  }
-
-  .saiba-mais-btn {
-    background-color: #000;
-    border: none;
-    outline: none;
-    color: #00ff10;
-    cursor: pointer;
-    padding: 1rem;
-    align-self: center;
-    font-weight: 600;
-    border: 2px solid #00ff10;
   }
 
 </style>

@@ -226,6 +226,23 @@ Este worm foi mitigado pelas atualizações dos antivírus, desfazendo as altera
   
 }
 
+export const textCredits = `
+<ul style="list-style-type: decimal!important; list-style: auto!important; margin-left: 2.5rem; display: grid; gap: 1rem">
+<li>https://www.welivesecurity.com/br/2018/11/05/malware-dos-anos-80-o-virus-de-computador-brain-e-o-worm-morris/</li>
+<li>https://www.devx.com/terms/jerusalem-virus/</li>
+<li>https://threats.kaspersky.com/br/threat/Virus.MSWord.Melissa/</li>
+<li>https://threats.kaspersky.com/br/threat/Virus.Win9x.CIH/</li>
+<li>https://www.kaspersky.com.br/blog/cybersecurity-history-iloveyou/19835/</li>
+<li>https://www.kaspersky.com.br/blog/history-lessons-code-red/19826/</li>
+<li>https://threats.kaspersky.com/en/threat/Email-Worm.Win32.Klez/</li>
+<li>https://threats.kaspersky.com/br/threat/Net-Worm.Win32.Nimda/</li>
+<li>https://museucapixaba.com.br/hoje/virus-de-computador-mydoom-de-2004/</li>
+<li>https://threats.kaspersky.com/en/threat/Net-Worm.Win32.Sasser/</li>
+<li>https://www.kaspersky.com.br/blog/stuxnet-as-origens/4391/</li>
+<li>https://www.compugraf.com.br/blog/notpetya-tudo-sobre-o-ciberataque-mais-devastador-da-historia/</li>
+</ul>
+`
+
 export const textIntroduction = `
 <div>
 <h2 style="font-size: 2.5rem; font-weight: 500; margin-bottom: 1rem"># O que é um vírus?</h2>
